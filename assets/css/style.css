@@ -10,6 +10,7 @@ a {
     text-decoration: none;
 }
 
+
 #main-header {
     background-color: #1C1919;
     display: flex;
@@ -58,7 +59,6 @@ a {
 
 }
 
-
 main {
     /* background-color: #282522; */
     color: #AA6836;
@@ -97,6 +97,10 @@ main h1 {
     object-fit: cover;
 }
 
+.food-item h2 {
+    margin: 0 0 1rem 0;
+}
+
 .food-item-contents {
     padding: 1rem;
     text-align: center;
@@ -113,7 +117,80 @@ main h1 {
     background-color: #f89721;
 }
 
-@media (max-width:768px) {
+.menu-btn {
+    display: none;
+}
+
+
+#side-drawer {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 28, 25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#side-drawer header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10%;
+    width: 100%;
+    height: 5rem;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+#side-drawer:target {
+    display: block;
+}
+
+#side-drawer ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    margin: 0;
+    padding: 4rem 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#side-drawer li {
+    margin: 1rem 0;
+}
+
+#side-drawer a {
+    font-size: 2rem;
+    color: rgb(253, 239, 213);
+}
+
+@media (max-width:48rem) {
+    header nav {
+        display: none;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-btn {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .menu-btn span {
+        width: 100%;
+        height: 3px;
+        background-color: #ce7632;
+    }
+
+
     #latest-products ul {
         grid-template-columns: 1fr;
     }
